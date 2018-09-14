@@ -11,7 +11,7 @@ public class Main {
         int n = 2;
         int b = 1;
         int m = 2;
-        final int C = 0;
+        final int C = 1;
 //        char i = (char)a;
 //        char j = (char)b;
         for (char i = (char)a; i <= n; i++) {
