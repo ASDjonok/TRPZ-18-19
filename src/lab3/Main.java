@@ -6,7 +6,7 @@ package lab3;
  */
 public class Main {
     public static void main(String[] args) {
-        /*StringBuilder stringBuilder = new StringBuilder();
+        StringBuilder stringBuilder = new StringBuilder();
         stringBuilder.append("mother");
         StringBuilder stringBuilder2 = new StringBuilder("mother");
         System.out.println(stringBuilder.equals(stringBuilder2));
@@ -19,7 +19,7 @@ public class Main {
         System.out.println(string == string2);
         System.out.println(string.hashCode());
         System.out.println(string2.hashCode());
-        System.out.println(string.length());*/
+        System.out.println(string.length());
 
         String[] splitStrings = "Привет. Я здесь.".split("(\\. )|\\.");
         for (int i = 0; i < splitStrings.length; i++) {
@@ -31,7 +31,7 @@ public class Main {
 
         /*int a[] = {1, 2, 3, 4, 5};
         int[] a = new int[] {1, 2, 3, 4, 5};*/
-        /*stringBuilder.append("Papa mama brother");
+        stringBuilder.append("Papa mama brother");
         System.out.println(stringBuilder.charAt(1));
         System.out.println(stringBuilder.indexOf(" ", 5));
         System.out.println(stringBuilder);
@@ -41,7 +41,7 @@ public class Main {
         StringBuffer stringBuffer = new StringBuffer();
 
         // Aaaa a. B a a. B a.
-        // Папа мама --- Паа маа*/
+        // Папа мама --- Паа маа
 
     }
 }
