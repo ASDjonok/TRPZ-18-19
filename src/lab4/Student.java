@@ -45,4 +45,15 @@ public class Student {
     public String getSurname() {
         return surname;
     }
+
+    @Override
+    public String toString() {
+        return "Student{" +
+                "course=" + course +
+                ", group='" + group + '\'' +
+                ", name='" + name + '\'' +
+                ", surname='" + surname + '\'' +
+                ", averageMark=" + averageMark +
+                '}';
+    }
 }
