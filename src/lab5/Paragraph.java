@@ -11,4 +11,21 @@ public class Paragraph {
             sentences[i] = new Sentence(split[i]);
         }
     }
+
+    @Override
+    public boolean equals(Object obj) {
+//        System.out.println(((Text)obj).paragraphs.length);
+        if (obj instanceof Paragraph) {
+            Paragraph paragraph = (Paragraph) obj;
+            if (paragraph.sentences.length == sentences.length) {
+                for (int i = 0; i < sentences.length; i++) {
+                    if (!sentences[i].equals(paragraph.sentences[i])) {
+                        return false;
+                    }
+                }
+                return true;
+            }
+        }
+        return false;
+    }
 }
