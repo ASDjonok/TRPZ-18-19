@@ -5,4 +5,12 @@ public class Punctuation extends SentenceMember{
     public Punctuation(String symbols) {
         this.symbols = symbols;
     }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (obj instanceof Punctuation) {
+            return ((Punctuation) obj).symbols.equals(symbols);
+        }
+        return false;
+    }
 }

@@ -21,14 +21,14 @@ public class Sentence {
     public boolean equals(Object obj) {
         if (obj instanceof Sentence) {
             Sentence sentence = (Sentence) obj;
-            /*if (paragraph.sentences.length == sentences.length) {
-                for (int i = 0; i < sentences.length; i++) {
-                    if (!sentences[i].equals(paragraph.sentences[i])) {
+            if (sentence.sentenceMembers.length == sentenceMembers.length) {
+                for (int i = 0; i < sentenceMembers.length; i++) {
+                    if (!sentenceMembers[i].equals(sentence.sentenceMembers[i])) {
                         return false;
                     }
                 }
                 return true;
-            }*/
+            }
         }
         return false;
     }

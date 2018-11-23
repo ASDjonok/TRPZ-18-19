@@ -14,10 +14,9 @@ public class Text {
 
     @Override
     public boolean equals(Object obj) {
-//        System.out.println(((Text)obj).paragraphs.length);
         if (obj instanceof Text) {
             Text text = (Text) obj;
-            if (text.paragraphs.length == paragraphs.length) {
+            if (text.paragraphs.length == this.paragraphs.length) {
                 for (int i = 0; i < paragraphs.length; i++) {
                     if (!paragraphs[i].equals(text.paragraphs[i])) {
                         return false;
