@@ -14,7 +14,12 @@ public class Sentence {
             } else {
                 sentenceMembers[i] = new Word(split[i]);
             }
-    }
+        }
+        System.out.println("==============");
+        for (SentenceMember sentenceMember : sentenceMembers) {
+            sentenceMember.whoAreYou();
+        }
+        System.out.println("==============");
     }
 
     @Override

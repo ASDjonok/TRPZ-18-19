@@ -24,4 +24,10 @@ public class Word extends SentenceMember{
         }
         return false;
     }
+
+    @Override
+    public void whoAreYou() {
+        super.whoAreYou();
+        System.out.println("And I am Word!");
+    }
 }
