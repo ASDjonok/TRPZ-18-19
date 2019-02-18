@@ -2,13 +2,13 @@ package lab7.linkedList;
 
 import lab6.МузичнаКомпозиція;
 import lab6.ПопулярнаКомпозиція;
-import lab7.MySet;
+import lab8.WrongNameValueException;
 
 import java.util.Iterator;
 import java.util.NoSuchElementException;
 
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws WrongNameValueException {
         MyList myList = new MyList();
         myList.add(new ПопулярнаКомпозиція("Yo!", 123));
         myList.add(new ПопулярнаКомпозиція("Yo2!", 124));

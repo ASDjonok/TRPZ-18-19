@@ -18,7 +18,7 @@ public class Main {
 //        char j = (char)b;
         for (char i = (char)a; i <= n; i++) {
             for (char j = (char)b; j <= m; j++) {
-                S = S + ((double)i/j/(i-C));
+                S = S + ((double)(i/j)/(i-C));
             }
         }
         System.out.println(S);

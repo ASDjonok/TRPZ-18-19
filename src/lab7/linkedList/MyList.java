@@ -139,7 +139,52 @@ public class MyList implements List<МузичнаКомпозиція> {
 
     @Override
     public ListIterator<МузичнаКомпозиція> listIterator() {
-        return null;
+        return new ListIterator<МузичнаКомпозиція>() {
+            @Override
+            public boolean hasNext() {
+                return false;
+            }
+
+            @Override
+            public МузичнаКомпозиція next() {
+                return null;
+            }
+
+            @Override
+            public boolean hasPrevious() {
+                return false;
+            }
+
+            @Override
+            public МузичнаКомпозиція previous() {
+                return null;
+            }
+
+            @Override
+            public int nextIndex() {
+                return 0;
+            }
+
+            @Override
+            public int previousIndex() {
+                return 0;
+            }
+
+            @Override
+            public void remove() {
+
+            }
+
+            @Override
+            public void set(МузичнаКомпозиція музичнаКомпозиція) {
+
+            }
+
+            @Override
+            public void add(МузичнаКомпозиція музичнаКомпозиція) {
+
+            }
+        };
     }
 
     @Override

@@ -1,5 +1,7 @@
 package lab6;
 
+import lab8.WrongNameValueException;
+
 public class МузичнаКомпозиція {
     private String назва;
     private int тривалість;
@@ -9,7 +11,11 @@ public class МузичнаКомпозиція {
         return obj.toString().equals(toString());
     }
 
-    public МузичнаКомпозиція(String назва, int тривалість) {
+    public МузичнаКомпозиція(String назва, int тривалість)
+            throws WrongNameValueException {
+        if (назва == null) {
+            throw new WrongNameValueException();
+        }
         this.назва = назва;
         this.тривалість = тривалість;
     }

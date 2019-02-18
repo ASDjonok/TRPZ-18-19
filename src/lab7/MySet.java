@@ -2,6 +2,7 @@ package lab7;
 
 import lab6.МузичнаКомпозиція;
 
+import java.util.Arrays;
 import java.util.Collection;
 import java.util.Iterator;
 import java.util.Set;
@@ -63,7 +64,7 @@ public class MySet implements Set<МузичнаКомпозиція> {
 
     @Override
     public Object[] toArray() {
-        return new Object[0];
+        return Arrays.copyOf(elements, size);
     }
 
     @Override

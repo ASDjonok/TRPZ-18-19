@@ -2,11 +2,12 @@ package lab7;
 
 import lab6.МузичнаКомпозиція;
 import lab6.ПопулярнаКомпозиція;
+import lab8.WrongNameValueException;
 
 import java.util.Iterator;
 
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws WrongNameValueException {
         MySet mySet = new MySet();
         mySet.add(new ПопулярнаКомпозиція("Yo!", 123));
         Iterator<МузичнаКомпозиція> iterator = mySet.iterator();
