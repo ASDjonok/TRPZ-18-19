@@ -11,6 +11,7 @@ public class Main {
         o.toString();*/
 //        myMethod();
         //....
+
         /*try {
             МузичнаКомпозиція музичнаКомпозиція =
                     new МузичнаКомпозиція(name, 0);
@@ -22,9 +23,12 @@ public class Main {
         }*/
         try {
             МузичнаКомпозиція музичнаКомпозиція =
-                    new ПопулярнаКомпозиція(name, 100);
+                    new ПопулярнаКомпозиція("123", 0);
+            System.out.println(":)");
         } catch (WrongNameValueException e) {
-            e.printStackTrace();
+            System.out.println("Не может быть музыка без названия):");
+        } catch (WrongТривалістьValueException e) {
+            System.out.println("Не может быть музыка без времени):");
         }
         //...
 
