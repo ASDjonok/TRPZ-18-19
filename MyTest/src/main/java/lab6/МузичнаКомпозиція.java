@@ -3,7 +3,7 @@ package lab6;
 import lab8.WrongNameValueException;
 import lab8.WrongТривалістьValueException;
 
-public class МузичнаКомпозиція {
+public abstract class МузичнаКомпозиція {
     private String назва;
     private int тривалість;
 
@@ -18,7 +18,8 @@ public class МузичнаКомпозиція {
             throw new WrongNameValueException();
         }
         if (тривалість <= 0) {
-            throw new WrongТривалістьValueException();
+            throw new WrongТривалістьValueException("Проблема в тому, що тривалість композиції <= 0, і не можна " +
+                    "створити такий трек");
         }
         this.назва = назва;
         this.тривалість = тривалість;

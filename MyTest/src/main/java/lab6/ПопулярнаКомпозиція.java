@@ -8,4 +8,6 @@ public class ПопулярнаКомпозиція extends МузичнаКом
             throws WrongNameValueException, WrongТривалістьValueException {
         super(назва, тривалість);
     }
+
+    public void myMethod(){}
 }

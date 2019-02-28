@@ -1,7 +1,7 @@
 package lab8;
 
-import lab6.МузичнаКомпозиція;
 import lab6.ПопулярнаКомпозиція;
+import lab7.MySet;
 
 public class Main {
     public static void main(String[] args) {
@@ -22,13 +22,14 @@ public class Main {
             e.printStackTrace();
         }*/
         try {
-            МузичнаКомпозиція музичнаКомпозиція =
-                    new ПопулярнаКомпозиція("123", 0);
+            new MySet().add(new ПопулярнаКомпозиція("123", -23));
             System.out.println(":)");
         } catch (WrongNameValueException e) {
-            System.out.println("Не может быть музыка без названия):");
+//            System.out.println("Не может быть музыка без названия):");
+            System.out.println(e.getMessage());
         } catch (WrongТривалістьValueException e) {
-            System.out.println("Не может быть музыка без времени):");
+//            System.out.println("Не может быть музыка без времени):");
+            System.out.println(e.getMessage());
         }
         //...
 

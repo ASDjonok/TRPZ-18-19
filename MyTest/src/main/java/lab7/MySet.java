@@ -1,6 +1,7 @@
 package lab7;
 
 import lab6.МузичнаКомпозиція;
+import lab8.WrongТривалістьValueException;
 
 import java.util.Arrays;
 import java.util.Collection;
@@ -9,6 +10,7 @@ import java.util.Set;
 
 public class MySet implements Set<МузичнаКомпозиція> {
     private static final int INITIAL_CAPACITY = 15;
+    private static final int MIN_TRACK_TIME_LENGTH = 10;
     private МузичнаКомпозиція[] elements = new МузичнаКомпозиція[INITIAL_CAPACITY];
     private int size = 0;
 
@@ -72,8 +74,18 @@ public class MySet implements Set<МузичнаКомпозиція> {
         return null;
     }
 
+    /**
+     *
+     * @param музичнаКомпозиція музична композиція для додавання в колекцію
+     * @return чи змінилася колекція
+     * @throws WrongТривалістьValueException коли композиція коротша за 10 секунд
+     */
     @Override
     public boolean add(МузичнаКомпозиція музичнаКомпозиція) {
+        if (музичнаКомпозиція.віддайТривалість() < MIN_TRACK_TIME_LENGTH) {
+            throw new WrongТривалістьValueException("Проблема в тому, що тривалість композиції < 10, і не можна " +
+                    "додати у альбом такий трек");
+        }
         elements[size++] = музичнаКомпозиція;
         return true;
     }
