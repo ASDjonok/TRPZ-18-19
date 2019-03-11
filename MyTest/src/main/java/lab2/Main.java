@@ -16,9 +16,12 @@ public class Main {
         B[0][1] = 2;
         B[1][0] = 3;
         B[1][1] = 4;*/
-        final long[][] B = {{1, 2, 3},
-                            {4, 5, 6},
-                            {7, 8, 9}};
+        final long[][] B =
+                {
+                        {1, 2, 3},
+                        {4, 5, 6},
+                        {7, 8, 9}
+                };
         for (int i = 0; i < B.length; i++) {
             for (int j = 0; j < B[i].length; j++) {
                 System.out.print(B[i][j] + " ");

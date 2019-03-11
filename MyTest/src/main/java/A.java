@@ -4,7 +4,8 @@ public class A {
     }
 
     public static void main(String[] args) {
-        System.out.println(A.myMethod());
+        char c = 0x54;
+        System.out.println(c);
         System.out.println("Done!");
     }
 }
