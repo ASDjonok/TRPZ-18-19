@@ -3,7 +3,9 @@ package lab9;
 import lab8.WrongNameValueException;
 import lab8.WrongТривалістьValueException;
 
-public abstract class МузичнаКомпозиція /*implements Serializable*/ {
+import java.io.Serializable;
+
+public abstract class МузичнаКомпозиція implements Serializable {
     protected String назва;
     protected int тривалість;
 
