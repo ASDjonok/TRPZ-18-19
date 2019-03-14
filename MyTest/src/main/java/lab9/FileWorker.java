@@ -11,7 +11,8 @@ public class FileWorker {
 //            outputStream.write(54);
             ObjectOutputStream objectOutputStream = new ObjectOutputStream(outputStream);
             objectOutputStream.writeObject(mySet);
-            System.out.println(":)");
+            objectOutputStream.close();
+            System.out.println(": )");
         } catch (FileNotFoundException e) {
             System.out.println("Sorry. File was not found.");
         } catch (IOException e) {

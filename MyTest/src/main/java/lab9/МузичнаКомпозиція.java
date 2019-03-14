@@ -3,7 +3,7 @@ package lab9;
 import lab8.WrongNameValueException;
 import lab8.WrongТривалістьValueException;
 
-public abstract class МузичнаКомпозиція {
+public abstract class МузичнаКомпозиція /*implements Serializable*/ {
     protected String назва;
     protected int тривалість;
 
@@ -34,6 +34,9 @@ public abstract class МузичнаКомпозиція {
 
     @Override
     public String toString() {
-        return назва + " " + this.getClass().getSimpleName() + " "+ тривалість + " с.";
+        String simpleName = this.getClass().getSimpleName();
+        return (назва != null
+                ? назва + " " + simpleName + " "+ тривалість + " с"
+                : simpleName) + ".";
     }
 }

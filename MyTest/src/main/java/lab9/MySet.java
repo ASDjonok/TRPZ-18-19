@@ -6,9 +6,8 @@ import java.io.Serializable;
 import java.util.Arrays;
 import java.util.Collection;
 import java.util.Iterator;
-import java.util.Set;
 
-public class MySet implements Set<МузичнаКомпозиція>, Serializable {
+public class MySet implements MySetInterface<МузичнаКомпозиція>, Serializable {
     private static final int INITIAL_CAPACITY = 15;
     private static final int MIN_TRACK_TIME_LENGTH = 10;
     private МузичнаКомпозиція[] elements = new МузичнаКомпозиція[INITIAL_CAPACITY];
