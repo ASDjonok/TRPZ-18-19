@@ -1,6 +1,7 @@
 package lab9;
 
 import java.io.*;
+import java.util.ArrayList;
 
 public class FileWorker {
 
@@ -32,7 +33,7 @@ public class FileWorker {
         return null;
     }
 
-    public static void saveObjectsToFile(String fileName, МузичнаКомпозиція ...музичнаКомпозиціяs) {
+    public static void saveObjectsToFile(String fileName, МузичнаКомпозиція[] музичнаКомпозиціяs) {
         File file = new File(fileName);
         try {
             OutputStream outputStream = new FileOutputStream(file);
@@ -49,16 +50,41 @@ public class FileWorker {
 
     public static МузичнаКомпозиція[] loadObjectsFromFile(String fileName) {
         File file = new File(fileName);
+        ArrayList<МузичнаКомпозиція> музичнаКомпозиціяs =
+                new ArrayList<>();
         try {
             InputStream inputStream = new FileInputStream(file);
             ObjectInputStream objectInputStream = new ObjectInputStream(inputStream);
-            МузичнаКомпозиція[] музичнаКомпозиціяs = new МузичнаКомпозиція[2];
-            музичнаКомпозиціяs[0] = (МузичнаКомпозиція) objectInputStream.readObject();
-            музичнаКомпозиціяs[1] = (МузичнаКомпозиція) objectInputStream.readObject();
-             return музичнаКомпозиціяs;
+            МузичнаКомпозиція музичнаКомпозиція = (МузичнаКомпозиція) objectInputStream.readObject();
+            while (true) {
+                музичнаКомпозиціяs.add(музичнаКомпозиція);
+//                try {
+                    музичнаКомпозиція = (МузичнаКомпозиція) objectInputStream.readObject();
+                /*} catch (EOFException e) {
+                    break;
+                }*/
+            }
+//            музичнаКомпозиціяs[0] = (МузичнаКомпозиція) objectInputStream.readObject();
+//            музичнаКомпозиціяs[1] = (МузичнаКомпозиція) objectInputStream.readObject();
         } catch (IOException | ClassNotFoundException e) {
-            e.printStackTrace();
+//            e.printStackTrace();
         }
-        return null;
+        return музичнаКомпозиціяs.toArray(new МузичнаКомпозиція[0]);
+    }
+
+    public static void saveSymbolToTextFile
+            (String fileName, char symbol) throws IOException {
+        OutputStream outputStream = new FileOutputStream(fileName);
+        outputStream.write(symbol);
+        //todo check closing file
+    }
+
+    public static void saveStringToTextFile
+            (String fileName, String string) throws IOException {
+        OutputStream outputStream = new FileOutputStream(fileName);
+        for (char symbol : string.toCharArray()) {
+            outputStream.write(symbol);
+        }
+        //todo check closing file
     }
 }
