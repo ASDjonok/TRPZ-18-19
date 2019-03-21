@@ -81,10 +81,27 @@ public class FileWorker {
 
     public static void saveStringToTextFile
             (String fileName, String string) throws IOException {
-        OutputStream outputStream = new FileOutputStream(fileName);
-        for (char symbol : string.toCharArray()) {
+        /*OutputStream outputStream = new FileOutputStream(fileName);
+        *//*for (char symbol : string.toCharArray()) {
             outputStream.write(symbol);
+        }*//*
+        ObjectOutputStream objectOutputStream = new ObjectOutputStream(outputStream);
+        objectOutputStream.writeUTF(string);
+//        objectOutputStream.flush();
+        objectOutputStream.close();
+//        objectOutputStream.writeChars("saAAAAAAAAAAAAAAAAAA");
+//        objectOutputStream.flush();*/
+
+        FileWriter fileWriter = new FileWriter(fileName);
+        fileWriter.write(string);
+        fileWriter.close();
+    }
+
+    public static void saveObjectsToTextFile(String fileName, КласичнийМузичнийТвір[] музичнаКомпозиціяs) throws IOException {
+        FileWriter fileWriter = new FileWriter(fileName);
+        for (КласичнийМузичнийТвір музичнаКомпозиція : музичнаКомпозиціяs) {
+            fileWriter.write(музичнаКомпозиція.toString() + "\n");
         }
-        //todo check closing file
+        fileWriter.close();
     }
 }
