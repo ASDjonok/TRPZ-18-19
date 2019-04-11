@@ -1,6 +1,6 @@
 package patterns.lab1.composite.variant1;
 
-public class OperationSymbol {
+public class OperationSymbol implements Expression {
     private char symbol;
     private final static char[] ALLOWED_SYMBOLS = {'+', '-', '*', '/'};
 
@@ -20,7 +20,7 @@ public class OperationSymbol {
     }
 
     @Override
-    public String toString() {
+    public String getView() {
         return "" + symbol;
     }
 }
