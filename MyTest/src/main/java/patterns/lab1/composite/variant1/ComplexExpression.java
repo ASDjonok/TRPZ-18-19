@@ -15,8 +15,8 @@ public class ComplexExpression implements Expression {
 
     @Override
     public String getView() {
-        return firstExpression.getView() +
+        return '(' + firstExpression.getView() +
                 operationSymbol.getView() +
-                secondExpression.getView();
+                secondExpression.getView() + ')';
     }
 }
