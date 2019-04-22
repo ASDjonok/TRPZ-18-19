@@ -1,8 +1,6 @@
 package patterns.lab1.decorator;
 
-public class LineTypeDecorator extends Figure {
-    private Figure figure;
-
+public class LineTypeDecorator extends AbstractDecorator {
     public LineTypeDecorator(Figure figure) {
         this.figure = figure;
     }

@@ -1,6 +1,6 @@
 package patterns.lab1.decorator;
 
-public class ColorDecorator extends Figure {
+public class ColorDecorator extends AbstractDecorator {
     private Figure figure;
 
     public ColorDecorator(Figure figure) {
