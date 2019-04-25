@@ -2,12 +2,16 @@ package lab4;
 
 import java.util.Comparator;
 
-public class MyComparator implements Comparator<Student> {
+public class ComparatorBySurnameDescendingAndByNameAscending implements Comparator<Student> {
     @Override
     public int compare(Student o1, Student o2) {
         int differenceSurname = o1.getSurname().compareTo(o2.getSurname());
-
-        if (differenceSurname > 0) {
+        if (differenceSurname == 0) {
+            return o1.getName().compareTo(o2.getName());
+        } else {
+            return -differenceSurname;
+        }
+        /*if (differenceSurname > 0) {
             return -1;
         } else {
             if (differenceSurname < 0) {
@@ -24,8 +28,7 @@ public class MyComparator implements Comparator<Student> {
                         return 0;
                     }
                 }
-
             }
-        }
+        }*/
     }
 }

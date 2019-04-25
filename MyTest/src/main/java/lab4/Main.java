@@ -79,7 +79,9 @@ public class Main {
                 }
             }
         });*/
-        Arrays.sort(students, new MyComparator());
+        Arrays.sort(students, new ComparatorBySurnameDescendingAndByNameAscending());
+        Arrays.sort(students, Comparator.comparing(Student::getSurname).reversed()
+                .thenComparing(Student::getName));
         System.out.println("+++++++++++");
         for (Student student : students) {
             System.out.println(student);

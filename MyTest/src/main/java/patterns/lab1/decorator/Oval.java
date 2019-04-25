@@ -1,7 +1,7 @@
 package patterns.lab1.decorator;
 
-public class Line extends AbstractFigureComponent {
-    public Line(int x, int y) {
+public class Oval extends AbstractFigureComponent {
+    public Oval(int x, int y) {
         super(x, y);
     }
 
