@@ -10,7 +10,7 @@ public class Main {
         mySet.add(музичнаКомпозиція1);
         КласичнийМузичнийТвір музичнаКомпозиція2 = new КласичнийМузичнийТвір("ASD", 234, "PI2");
         mySet.add(музичнаКомпозиція2);
-        FileWorker.saveCollectionToFile("1.txt", mySet);
+        FileWorker.saveCollectionToFile("1.ourbmp", mySet);
 
         КласичнийМузичнийТвір[] музичнаКомпозиціяs = {музичнаКомпозиція1, музичнаКомпозиція2};
         FileWorker.saveObjectsToFile("2.txt", музичнаКомпозиціяs);
