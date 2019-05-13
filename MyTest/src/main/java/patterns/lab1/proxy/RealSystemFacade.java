@@ -4,14 +4,14 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
 
-public class SystemFacade {
+public class RealSystemFacade extends AbstractSystemFacade {
 
     public String getFirstLineOfFile(String fileName) throws FileNotFoundException {
         Scanner scanner = getScanner(fileName);
         return scanner.nextLine();
     }
 
-    private Scanner getScanner(String fileName) throws FileNotFoundException {
+    private static Scanner getScanner(String fileName) throws FileNotFoundException {
         return new Scanner(
                 new File(
                         "MyTest/src/main/java/patterns/lab1/proxy/resources/" + fileName
@@ -19,8 +19,9 @@ public class SystemFacade {
         );
     }
 
-    public String getColor(int x, int y, String fileName)
+    public /*static*/ String getColor(int x, int y, String fileName)
             throws FileNotFoundException {
+        System.out.printf("Disk operation!");
         char result = 0;
         Scanner scanner = getScanner(fileName);
         String line = "";
